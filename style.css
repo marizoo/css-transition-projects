@@ -1,0 +1,239 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  /* height: 100vh; */
+}
+
+/* ---------------- */
+/* 0x. xxx */
+/* 0x. xxx */
+/* ---------------- */
+/* ---------------- */
+/* 03. Animated Menu */
+.body3 {
+  height: 300px;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  background-color: lightskyblue;
+}
+
+.container3 {
+  width: 400px;
+  height: 100px;
+  display: flex;
+  overflow: hidden;
+}
+
+.interactive-cont3 {
+  width: 150px;
+  height: 100%;
+  background-color: lightcoral;
+  position: relative;
+}
+
+.person {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(247, 234, 62);
+  position: relative;
+  transition: transform 1s ease;
+}
+
+.eyes {
+  width: 25px;
+  height: 20px;
+  /* background-color: lightslategray; */
+  position: absolute;
+  top: 10px;
+  left: 12.5px;
+  display: flex;
+  justify-content: space-between;
+  transition: all 1s ease;
+}
+
+.eye {
+  width: 6px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.mouth {
+  width: 35px;
+  height: 20px;
+  background-color: black;
+  border-radius: 0 0 60px 60px;
+  position: absolute;
+  top: 25px;
+  left: 7.5px;
+  transition: all 1s ease;
+}
+
+.mouth-surprised {
+  width: 10px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+  top: 25px;
+  left: 20px;
+}
+
+.smiling-person {
+  position: absolute;
+  top: 25px;
+  left: 50px;
+}
+
+.box3 {
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    75% 75%,
+    75% 100%,
+    50% 75%,
+    0% 75%
+  );
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  position: relative;
+  top: 20px;
+  left: 52px;
+  transform: rotate(180deg);
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.dots {
+  position: absolute;
+  top: 5px;
+  left: 12.5px;
+}
+
+.surprised-person {
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+}
+
+.text-cont3 {
+  width: 250px;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.container3:hover .smiling-person {
+  transform: translate(-50px, -25px);
+}
+.container3:hover .surprised-person {
+  transform: translate(-50px, -50px);
+}
+.container3:hover .box3 {
+  opacity: 1;
+}
+
+.container3:hover .smiling-person .eyes,
+.container3:hover .smiling-person .mouth {
+  transform: translateX(3px);
+}
+
+/* 03. Animated menu */
+/* ---------------- */
+
+/* ---------------- */
+/* 02. Skewed Cards */
+.body2 {
+  height: 600px;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  perspective: 900px;
+}
+
+.card2 {
+  width: 20%;
+  height: 80%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px #555;
+  transform: rotateX(60deg) scale(0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  transition: all 0.5s ease;
+}
+
+.img2 {
+  width: 100%;
+  height: 40%;
+}
+
+.card2:hover {
+  transform: rotate(0deg) scale(1) translateY(10px);
+}
+
+.title2 {
+  color: #555;
+  font-weight: 500;
+}
+
+/* 02. Skewed Cards */
+/* ---------------- */
+
+/* ---------------- */
+/* 01. Keyboard button */
+.body1 {
+  height: 120px;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  font-size: 20px;
+  perspective: 1000px;
+}
+
+.button1 {
+  width: 200px;
+  height: 100px;
+  background-color: lightpink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: 1px solid #333;
+  box-shadow: 0 40px 0 0 rgba(248, 166, 179);
+  transform: rotateX(60deg);
+}
+
+.button1:active {
+  transform: rotateX(60deg) translateY(40px);
+  box-shadow: none;
+}
+/* 01. Keyboard button */
+/* ---------------- */
